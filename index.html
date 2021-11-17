@@ -1,12 +1,10 @@
 <!DOCTYPE html><html lang="en"><head>
-    <script src="p5.js"></script>
-    <script src="p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Codystar:wght@300&display=swap" rel="stylesheet">
     <meta charset="utf-8">
-    <script src="./client.js" type="module"></script>
+    <!-- <script src="./client.js" type="module"></script> -->
     <!-- import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js'; -->
   </head>
   <body>
@@ -29,10 +27,10 @@
 </div> -->
 
 <!-- script scene -->
-<!-- <script src="./build/three.js"></script>
+<script src="./build/three.js"></script>
 <script type="module" src="GLTFLoader.js"></script>
 <script type="module">
-  import {GLTFLoader} from "./GLTFLoader.js";
+  import {GLTFLoader} from "./src/GLTFLoader.js";
 
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(
@@ -49,7 +47,7 @@
   var loader = new GLTFLoader();
 
   var obj;
-  loader.load("planet_animation.glb", function (gltf) {
+  loader.load("./assets/planet_animation.glb", function (gltf) {
       obj = gltf.scene;
       scene.add(gltf.scene);
   });
@@ -68,7 +66,7 @@
 
 
 <!--
-<div class="space"></div> -->
+<div class="space"></div>
 
 
 
