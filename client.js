@@ -63,7 +63,7 @@ function init() {
 
   // Load preanimated model, add material, and add it to the scene
   const loader = new GLTFLoader().load(
-    "./assets/blend_def_ani.glb",
+    "./assets/planet_animation.glb",
     function(gltf) {
       gltf.scene.traverse(function(child) {
         if (child.isMesh) {
