@@ -22,6 +22,7 @@ canvas {
   max-width: 800px;
   border: 3px solid #6E2E99;
   border-radius: 3px;
+
 }
 
 #space {
@@ -61,7 +62,8 @@ left: 50%;
 
 .image{
   position: relative;
-  top: -125px;
+  top: 820px;
+  left: 500px;
 }
 
 

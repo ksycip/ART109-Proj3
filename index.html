@@ -17,7 +17,14 @@
 <h1>In Your Hands</h1>
 <h3>Kyra SyCip</h3>
 
- <form action="./">
+ <!-- <form action="./"> -->
+
+<div class="image">
+  <img src="/assets/hand.png" alt="hand" width="500"
+         height="400">
+</div>
+
+<h3>Please scroll downwards to see model</h3>
 
 <!-- <div class="image">
   <img src="assets/hand.png" alt="holding hand"
@@ -27,40 +34,43 @@
 </div> -->
 
 <!-- script scene -->
-<script src="./build/three.js"></script>
-<script type="module" src="GLTFLoader.js"></script>
 <script type="module">
-  import {GLTFLoader} from "./src/GLTFLoader.js";
 
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth/window.innerHeight,
-    .01,
-    1000
-  );
+import * as THREE from './build/three.module.js';
+import {GLTFLoader} from "./src/GLTFLoader.js";
 
-  var renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
 
-  var loader = new GLTFLoader();
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth/window.innerHeight,
+  .01,
+  1000
+);
 
-  var obj;
-  loader.load("./assets/planet_animation.glb", function (gltf) {
-      obj = gltf.scene;
-      scene.add(gltf.scene);
-  });
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
-  scene.background = new THREE.Color(0xFFFFFF);
-  var light = new THREE.HemisphereLight(0xffffff,0x000000, 2);
-  scene.add(light);
-  camera_position.set(0,0,100);
-  function animate(){
-    requestAnimationFrame(animate);
-    render.render(scene,camera);
-  }
-  animate();
+const loader = new GLTFLoader();
+var obj;
+loader.load("./assets/planet_animation.glb", function (gltf) {
+    obj = gltf.scene;
+    scene.add(gltf.scene);
+});
+
+scene.background = new THREE.Color(0xFFFFFF);
+var light = new THREE.HemisphereLight(0xffffff,0x000000, 2);
+scene.add(light);
+
+camera.position.set(0,0,10);
+
+function animate(){
+  requestAnimationFrame(animate);
+  renderer.render(scene,camera);
+}
+animate();
+
 </script> -->
 
 
